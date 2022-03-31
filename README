@@ -1,0 +1,21 @@
+1. Am implementat o clasa player cu datele fiecarui jucator, o clasa team care contine datele echipei, 
+printre care un vector de Playeri in care se vor stoca jucatorii fiecarei echipe. Si o ultima clasa folosita pentru aceasta cerinta este Lista care va ajuta
+la construirea listei de echipe. Apoi se for apela functii special construite pentru a citi din fisierier datele si a le stoca in lista.
+2. Am folosit o functie structureaza, care se gaseste in rezolvari.cpp, care calculeaza numarul de echipe care trebuie sa ramana, aceasta apeland si 
+functia de eliminare a unei echipe din lista de cate ori este nevoie. Cu ajutorul functiei care calculeaza scorul minim pe lista de echipe, se va face eliminarea
+echipei cu scorul cel mai mic de fiecare data. 
+3. Am folosit o clasa Coada, care, fata de lista, va contine 2 echipe, un obiect al acesteia reprezentand un meci, si o functie care va creea coada, 
+folosind informatiile stocate in lista. Fiind vorba de o coada, am ales sa adaug echipele in continuare, iar la extragere sa le extrag de la prima la ultima.
+Am mai facut si o functie joaca, care va apela mai multe functii mai mici cu scopul de a juca meciurile pana ramane o singura echipa (sa imparta coada in 2 stive,
+de invisi si de castigatori, stivele sunt de tipul clasei lista, adaugarea in stiva se va face la inceput pentru fiecare element, iar extragere de la primul la ultimul,
+ pentru a respecta proprietatile stivei. Pe parcursul impartirii, fiecare element al cozii este sters. Astfel dupa repartizare coada nu mai exista,
+ permitandu-ne sa o cream din nou, luand datele din stive de castigatori. Stivele vor fi si ele golite dupa afisare pentru a permite reumplerea lor la urmatorul pas.
+ Acesti pasi repetandu-se de cate ori este nevoie). De asemenea la un moment dat am salvat si ultimele 8 echipe ramase intr-o lista numita last8 apeland o functia salveaza.
+4. Am folosit o noua clasa numita Arbore si o functie makearbore care va apela functia de inserare pentru fiecare element al listei salvate anterior. 
+Dupa ce lista e parcursa si arborele este creat se face afisare lui cu functia inorder.
+5. Avand nevoie de datele de la 4, dar in ordine descrescatoare, mai intai am sortat lista last8 descrescator folosind functia dezordoneaza. Pentru aceasta cerinta
+am folosit o alta clasa numita Node, iar apelul functiei makeAVL parcurge lista last8 si insereaza in arbore fiecare element al listei, functia insert avand de altfel
+grija sa echilibreze arborele dupa fiecare introducere a unui element. Dupa acest proce am afisat nivelul cerut cu ajutorul functiei printGivenLevel.
+
+Pe parcursul rezolvarii se mai gasesc implementate si alte functii mai mici, dar esentiale, pe care nu le-am mai mentionat aici, numele lor fiind destul de intuitiv,
+existand si comentarii sugestive de-a lungul codului.
